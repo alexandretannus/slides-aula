@@ -1,0 +1,92 @@
+\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{cancel}
+\usepackage{askmaps}
+\usepackage{tabularx}
+\usepackage[table]{xcolor}
+%\usepackage{tikz}
+\usepackage{multirow}
+\usepackage{mathtools}
+\usepackage{color, colortbl}
+\usepackage{etoolbox}
+\usepackage{pbox}
+\usepackage{changepage}
+\usepackage{xpatch}
+\usepackage{array}
+\usepackage{marvosym}
+\usepackage{tabu}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{underscore}
+\usepackage{filecontents}
+\usepackage[]{algorithm2e}
+\usepackage{ragged2e}
+
+\newcolumntype{P}[1]{>{\centering\arraybackslash}m{#1}}
+\definecolor{Gray}{gray}{0.75}
+\definecolor{Gray2}{gray}{0.85}
+
+\definecolor{lightBlue}{HTML}{DAE8FC}
+\definecolor{Blue}{RGB}{51, 51, 204}
+
+%\useinnertheme[lily]{rounded}
+\usetheme{UniEvangelica}
+%\usetheme{Copenhagen}
+%\usetheme{Berlin}
+%\usecolortheme{dolphin}
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+
+
+\let\olditem=\item% 
+\renewcommand{\item}{\olditem \justifying}%
+\def\center{\trivlist \centering\item\relax}
+\def\endcenter{\endtrivlist}
+
+\setbeamertemplate{itemize/enumerate body begin}{\large}
+\setbeamertemplate{itemize/enumerate subbody begin}{\large}
+
+\setbeamertemplate{itemize item}{\raisebox{0.1ex}{$\blacktriangleright$}\hskip0.1em}
+\setbeamertemplate{itemize subitem}{\raisebox{0.1ex}{$\blacktriangleright$}\hskip0.1em}
+
+\newcommand{\greenarrow}{\textcolor{green}{\rotatebox[origin=c]{180}{\MVArrowDown}}}
+
+\newcommand{\redarrow}{\textcolor{red}{\MVArrowDown}}
+
+%\newcommand{\ftable}{
+%	\begin{table}
+%		\large
+%		\centering
+%		\rowcolors{1}{\ifnumless{\rownum}{2}{Blue}{lightBlue}}{}
+%}
+
+\newenvironment{eftable}{
+	\begin{table}
+		\large
+		\centering
+		\rowcolors{1}{}{Blue}
+		\rowcolors{1}{\ifnumless{\rownum}{2}{Blue}{lightBlue}}{}
+	}
+	{
+	\end{table}
+}
+
+
+%\setbeamertemplate{frametitle}
+%{
+%	%\vspace*{-2em}	
+%	\insertframetitle
+%
+%	 %\textcolor{white}{\LARGE \insertframetitle}
+%
+%}

@@ -1,0 +1,109 @@
+\usepackage{etoolbox}
+\usepackage{xpatch}
+
+
+\definecolor{Laranja}{rgb}{0.94,0.61,0.07}
+\definecolor{orange}{RGB}{255, 191, 128}
+
+ \ifnumequal{\c@framenumber}{1}{%
+	\setbeamersize{text margin left=2cm}
+}{
+	\setbeamersize{text margin left=2cm}
+	\setbeamersize{text margin right=2cm}
+}
+
+%\setbeamertemplate{headline}
+%{
+%	\includegraphics[width=\paperwidth,height=1cm]{./images/header.png}
+%
+%}
+
+%\setbeamertemplate{sidebar canvas right}
+%{
+%	%\vspace*{5pt} 
+%	%\hspace*{-85pt}
+%	%\includegraphics[scale=0.1]{./images/kroton.jpg}	
+%	\hspace{-2.3cm}
+%	\includegraphics[scale=0.2]{./images/pitagoras.png}	
+%}
+
+%
+%\setbeamertemplate{background canvas}{
+%
+%   \ifnumequal{\c@framenumber}{1}{%
+%      % First frame
+%      \includegraphics[width=\paperwidth,height=\paperheight]{./images/bgEvangelicaSlideTitle}
+%   }{%
+%      \ifnumequal{\c@framenumber}{\inserttotalframenumber}{
+%         % Last frame
+%         \includegraphics[width=\paperwidth,height=\paperheight]{./images/bgEvangelicaSlideFim}
+%      }{%
+%         % Other frames
+%          \includegraphics[width=\paperwidth,height=\paperheight]{./images/bgEvangelicaSlide}
+%      }%
+%   }%
+% }
+
+\setbeamertemplate{frametitle}
+{
+	\vspace*{-10em}	
+	%\insertframetitle
+
+	 \textcolor{Laranja}{\huge \insertframetitle}
+
+}
+
+\setbeamertemplate{title page}
+{
+	\vspace*{0.5cm}
+	\begin{flushright}
+	\begin{Large}
+	 \textcolor{Laranja}{\inserttitle}
+	\end{Large}
+	\\
+	\vspace*{0.3cm}
+	 \textcolor{Laranja}{\insertsubtitle}
+	\\
+	\vspace*{0.8cm}
+	\insertauthor
+	\end{flushright}
+}
+
+\setbeamertemplate{section page}
+{
+		\begin{flushright}
+			\begin{Huge}
+				\vspace{4.5cm}
+				\textcolor{Laranja}
+				\insertsectionhead	
+			\end{Huge}
+		\end{flushright}	
+}
+%\setbeamertemplate{footline}
+%{
+%	\includegraphics[width=\paperwidth,height=1cm]{../images/footer1.png}
+%}
+
+
+%% Itemize config
+\setbeamercolor{itemize subitem}{fg=Laranja}
+\setbeamercolor{itemize item}{fg=Laranja}
+\setbeamertemplate{itemize item}{\raisebox{0.1ex}{$\blacktriangleright$}\hskip0.1em}
+\setbeamertemplate{itemize subitem}{\raisebox{0.1ex}{$\blacktriangleright$}\hskip0.1em}
+\xpatchcmd{\itemize}
+  {\def\makelabel}
+  {\ifnum\@itemdepth=1\relax
+     \setlength\itemsep{2ex}% separation for first level
+   \else
+     \ifnum\@itemdepth=2\relax
+       \setlength\itemsep{1ex}% separation for second level
+     \else
+       \ifnum\@itemdepth=3\relax
+         \setlength\itemsep{0.5ex}% separation for third level
+   \fi\fi\fi\def\makelabel
+  }
+
+
+\setbeamertemplate{footline}[page number]%
+
+\setbeamertemplate{navigation symbols}{}
