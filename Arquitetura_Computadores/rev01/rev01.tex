@@ -1,0 +1,290 @@
+\documentclass[	aspectratio=169,
+				xcolor=table]{beamer}
+
+
+% Load general definitions
+\input{../../defs/slides.tex}
+
+% Specific definitions
+\title[]{Arquitetura de Computadores}
+\subtitle[]{Revisão Prova 01}
+\author[]{Prof. Alexandre Tannus}
+\date{}
+
+\begin{document}
+
+	\begin{frame}
+		\frametitle{Questão 1}
+		\Large Resolva as seguintes operações. Escreva o resultado em formato hexadecimal
+		
+		\begin{itemize}
+			\item $(57)_{8} + (D3)_{16}$
+			\item $(10011001)_{2} + (58)_{10}$
+			\item $(AB)_{16} + (712)_{8}$
+			\item $(33)_{10} + (33)_{8} + (33)_{16}$	
+			\item $(B4)_{16} - (90)_{10}$	
+		\end{itemize}
+		
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Questão 2}
+		A representação dos números e dos caracteres é importante para a organização dos computadores. Com relação às formas pelas quais os computadores podem armazenar esses números e caracteres, assinale a alternativa correta. 
+		\begin{enumerate}[a]
+			\large
+			\item O byte é a unidade de informação mais básica nos sistemas de computação. 
+			\item Um bit é um conjunto ordenado de 8 bytes. 
+			\item Uma palavra pode ter tanto 32 bits quanto 64 bits, dependendo de seu tamanho.
+			\item As duas bases mais utilizadas e mais importantes para a computação são a octal e a decimal. 
+			\item Não há como realizar uma conversão de base, ou seja, um número que é representado na base decimal não pode ser convertido para a base binária.
+		
+		\end{enumerate}
+
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Questão 3}
+		O hardware da maior parte dos computadores atuais é baseado na implementação da arquitetura de Von Neumann. Um dos principais componentes da arquitetura mencionada é a Unidade Lógica e Aritmética (ULA). No contexto prático, dentre as alternativas abaixo, a ULA é responsável por executar a operação de:
+		
+		\begin{enumerate}[a]
+			\large
+			\item soma de dois números.
+			\item controlar os periféricos de entrada e saída do sistema.
+			\item armazenamento de dados na memória do computador.
+			\item buscar, na memória, dados solicitados por um software.
+			\item definir o próximo software a ser executado pelo processador		
+		\end{enumerate}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Questão 4}
+		Em relação à organização dos sistemas computacionais, as alternativas abaixo apresentam os principais componentes, EXCETO: 
+		\begin{enumerate}[a]
+			\item Componentes de E/S.
+			\item Sistema operacional.
+			\item Memória.
+			\item Processador.
+		\end{enumerate}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Questão 5}
+		A Unidade Central de Processamento (UCP) é composta por um conjunto de componentes básico, EXCETO: 
+		\begin{enumerate}[a]
+			\item	Unidade de Controle.
+			\item	Unidade de Entrada/Saída.
+			\item	Unidade de Aritmética e Lógica. 
+			\item	Conjunto de Registradores. 
+			\item	Chipset.			
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Questão 6}
+		Um dos fatores que favoreceram o surgimento dos processadores de 64 bits foi a limitação do endereçamento de memória, pois processadores de 32 bits possuem a limitação de 4 GB de memória. Dessa forma, qual seria o limite, em GB, de um processador de 38 bits?
+		\begin{enumerate}[a]
+			\item	128
+			\item	256
+			\item	512
+			\item	64
+			\item	32  
+		  	
+		\end{enumerate}  
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Questão 7}
+		O acesso a dados em registradores internos da Unidade Central de Processamento (UCP): 
+		\begin{enumerate}[a]
+			\item produz uma cópia do dado em memória ROM; 
+			\item não usa a memória RAM;
+			\item pode acarretar perda de precisão;
+			\item é tão rápido quanto o acesso a dados em memória RAM; 
+			\item é mais lento que o acesso a dados em memória RAM.			
+		\end{enumerate}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Questão 8}
+		Em uma unidade central de processamento, o registrador cuja função precípua é indicar a próxima instrução a ser buscada para execução é denominado
+		\begin{enumerate}[a]
+			\item registrador de instrução (IR).
+			\item acumulador (AX).
+			\item registrador de base (BX).
+			\item registrador de contadores (CX).
+			\item contador de programa (PC).
+		\end{enumerate}
+
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Questão 9}
+		Analise as afirmativas sobre a organização e arquitetura de computadores.
+		\begin{enumerate}[i]
+		\large
+			\item A Unidade de Processamento Central (UCP) é composta por unidade lógica-aritmética, unidade de controle e registradores.
+			\item Os registradores são memórias com pequena capacidade de armazenamento, porém com alto desempenho.
+			\item A Unidade Lógica e Aritmética (ULA) é capaz de realizar as seguintes operações: adição, subtração, operações lógicas, e comparações. Mas esta unidade não é encarregada de realizar operações de deslocamento.
+			\item Os registradores são encarregados de controlar as operações realizadas pela UCP, esta envia sinais que coordenam as operações internas.
+			
+		\end{enumerate}
+
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Questão 10}
+		Os registradores utilizados pela CPU e pela memória para comunicação e transferência de informações são, respectivamente:
+		
+		\begin{enumerate}[a]
+			\item Contador de Instruções (CI) e Registrador de Dados de Memória (RDM).
+			\item Registrador de Endereços de Memória (REM) e Contador de Instruções (CI).
+			\item Registrador de Dados de Memória (RDM) e Registrador de Endereços de Memória (REM).
+			\item  Decodificador de Instruções (DI) e Contador de Instruções (CI).
+			\item  Decodificador de Instruções (DI) e Registrador de Dados de Memória (RDM).			
+		\end{enumerate}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Questão 11}
+		As seguintes características sobre registradores estão corretas, EXCETO: 
+		
+		\begin{enumerate}[a]
+			\item Capacidade de armazenamento limitada.
+			\item Alta velocidade.
+			\item Residem fisicamente junto à CPU.
+			\item Não volátil.			
+			\item Principal objetivo é aumentar a eficiência de processamento
+		\end{enumerate}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Questão 12}
+		Computadores efetuam a subtração de números binários por meio de adição, na qual o número a ser subtraído é representado em complemento de um.
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Questão 13}
+		Dentro do conceito de organização de computadores, a UCP (Unidade Central de Processamento) desempenha um papel fundamental, sendo composta por diversas partes. Em particular, a Unidade de Controle é a parte da UCP responsável por
+		\begin{enumerate}[a]
+			\item armazenar resultados temporários.
+			\item indicar a próxima instrução a ser buscada na memória, para execução.
+			\item buscar instruções na memória principal e determinar o tipo dessas instruções.
+			\item armazenar o código da instrução que está sendo correntemente executado.
+			\item realizar operações como adição e subtração sobre os valores presentes nas suas entradas.
+
+			
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Questão 14}
+		Instruções de máquina utilizam várias técnicas de endereçamento da memória.  Na técnica de endereçamento imediato, o
+		\begin{enumerate}[a]
+			\item valor do operando é especificado diretamente na instrução.
+			\item endereço do operando é obtido diretamente do campo de endereço da instrução.
+			\item endereço do operando é obtido diretamente do topo da pilha do sistema.
+			\item endereço do operando encontra-se em um registrador predeterminado da CPU.
+			\item campo de endereço da instrução contém um endereço de memória onde se encontra o endereço do operando.			
+		\end{enumerate}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Questão 15}
+		Considere:
+		\begin{enumerate}[i]
+			\item Acesso à memória limitado a instruções de carga e armazenamento (load e store). 
+			\item Formato de instrução facilmente descodificável e de tamanho fixo. 
+			\item Execução de instruções em um único ciclo de clock. 			
+		\end{enumerate}
+
+
+		I, II e III referem-se às características
+		
+		\begin{enumerate}[a]
+			\item da BIOS.
+			\item da EPROM.
+			\item do programa montador.
+			\item do processador RISC.
+			\item do processador CISC.			
+		\end{enumerate}
+	
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Questão 16}
+		Computador com um Conjunto Reduzido de Instruções (RISC) é uma linha de arquitetura de processadores que favorece um conjunto simples e pequeno de instruções que levam aproximadamente a mesma quantidade de tempo para ser executadas. São
+consideradas características típicas da organização RISC:
+		\begin{enumerate}[a]
+		\large
+			\item oferecer suporte para linguagens de alto nível e facilitar o desenvolvimento de compiladores.
+			\item prover o computador com um conjunto complexo de instruções e melhorar a execução de programas.
+			\item manter poucos registradores e ter registradores especializados.
+			\item otimizar o pipeline de instrução e apresentar um conjunto limitado de instruções com formato fixo.
+			\item dispor grande conjunto de instruções e apresentar vários modos de endereçamento.				
+		\end{enumerate}
+
+	\end{frame}	
+
+	\begin{frame}
+		\frametitle{Questão 17}
+		O processamento de instruções em um processador pode ser definido de forma simplificada nos seguintes passos: 
+		\begin{enumerate}[a]
+			\item Execução, Decodificação e Armazenamento. 
+			\item Busca, Armazenamento e Execução. 
+			\item Armazenamento, Busca e Decodificação.
+			\item Decodificação, Busca e Armazenamento. 
+			\item Busca, Decodificação e Execução.			
+		\end{enumerate}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Questão 18}
+		As plataformas de hardware de um computador estão intimamente relacionadas com o tipo de arquitetura adotada no processador por elas utilizado. A arquitetura Harvard, por exemplo, tem como característica marcante o fato de nela ocorrer a
+		\begin{enumerate}[a]
+			\large
+			\item encriptação dos dados escritos na memória, para a umentar a segurança
+			\item escrita dos dados em duas memórias distintas e redundantes, visando maior confiabilidade na recuperação de informações
+			\item manipulação de dados na forma vetorial, agilizando o processamento de dados n-dimensionais
+			\item utilização de um grande número de processadores trabalhando cooperativamente.
+			\item separação de barramentos de comunicação para a memória de instruções de programa e para a memória de dados			
+		\end{enumerate}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Questão 19}
+		Um computador de 64 bits significa dizer que
+		
+		\begin{enumerate}[a]
+			\item o clock oscila em frequência de 64 bits.
+			\item os dados são armazenados na RAM em blocos de 64 bits.
+			\item os dados são armazenados na cache em blocos de 64 bits.
+			\item o tamanho da palavra manipulada pela UCP é de 64 bits.
+			\item o tamanho do buffer para gravação no HD é de 64 bits.			
+		\end{enumerate}
+
+
+	\end{frame}
+
+
+	
+	\begin{frame}
+		\frametitle{Respostas}
+		
+		\begin{eftable}
+			\begin{tabular}{c c | c c | c c}
+			\textcolor{white}{Questão} & \textcolor{white}{Resposta} & 
+			\textcolor{white}{Questão} & \textcolor{white}{Resposta} & 
+			\textcolor{white}{Questão} & \textcolor{white}{Resposta} \\
+			2 & c & 3 & a & 4 & b \\ 
+			5 & e & 6 & b & 7 & b \\
+			8 & e & 9 & V-V-F-F & 10 & c \\			
+			11 & d & 12 & F & 13 & c \\		
+			14 & a & 15 & d & 16 & d \\		
+			17 & e & 18 & e & 19 & d \\		
+			\end{tabular}
+		\end{eftable}
+	\end{frame}
+	
+
+
+\end{document}

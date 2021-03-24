@@ -1,0 +1,197 @@
+\documentclass[aspectratio=169,
+				xcolor=table]{beamer}
+
+% Load general definitions
+\input{../../defs/slides.tex}
+
+% Specific definitions
+\institute[]{\uppercase{Engenharia de Software}}
+\title[]{Arquitetura e Organização de Computadores}
+\subtitle[]{\uppercase{Apresentação da Disciplina}}
+\author[]{Prof. Alexandre Tannus}
+\date{}
+
+\AtBeginSection{\frame{\tableofcontents[currentsection]}}
+
+\begin{document}
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\begin{frame}{Professor Alexandre Tannus}
+		\begin{center}
+			\centering
+			\huge Bacharel em Engenharia da Computação
+			\begin{figure}
+			\centering
+				\includegraphics[height=2cm, keepaspectratio]{../figs/puc.jpg} 			
+			\end{figure}
+			\huge Mestre em Engenharia Elétrica
+			\begin{figure}
+			\centering
+				\includegraphics[height=2cm, keepaspectratio]{../figs/ufmg.png} 		
+			\end{figure}
+		\end{center}
+	\end{frame}
+	
+	\begin{frame}[allowframebreaks]{Objetivos}
+		\begin{itemize}
+			\item Conhecer a evolução dos computadores e a estrutura dos computadores atuais (teoria).
+			\vspace{1em}
+			\item Assimilar os sistemas de numeração e contextualização da teoria nos sistemas decimal, binário e hexadecimal (teoria). 
+			\vspace{1em}
+			\item Compreender a execução de uma instrução pelo processador, abordando a memória, o ciclo de máquina, os dados e as instruções do programa.
+			\vspace{1em}
+			\item Reconhecer da arquitetura básica do processador Intel e algumas de suas instruções e utilização de uma ferramenta IDE (Masm) para linguagem de montagem e elaboração de programas simples. 
+			\vspace{1em}
+			\item Entender a estrutura e o funcionamento do barramento vislumbrando como é a troca de dados entre os diversos elementos constituintes do computador
+			\vspace{1em}
+			\item Conhecer da estrutura e funcionamento dos dispositivos básicos de entrada e saída, bem como das técnicas de comunicação entre eles, a memória e o processador. 
+
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}[allowframebreaks]{Ementa}
+		\begin{itemize}
+			\item Computadores modernos. 
+			\vspace{0.75em}
+			\item Evolução das arquiteturas dos computadores.
+			\vspace{0.75em}
+			\item  Sistemas de numeração e aritmética binária. 
+			\vspace{0.75em}
+			\item Memória e representação de dados e instruções.
+			\vspace{0.75em}
+			\item  Processador, ciclo de instrução, formatos, endereçamento e programação em linguagem de montagem.
+			\vspace{0.75em}
+			\item  Dispositivos de entrada e saída. Sistemas de interconexão (barramentos).
+			\vspace{0.75em}
+			\item  Interfaceamento e técnicas de entrada e saída.
+			\vspace{0.75em}
+			\item  Hierarquia de memória. 
+			\vspace{0.75em}
+			\item Paralelismo a nível de instrução. 
+			\vspace{0.75em}
+			\item Arquiteturas paralelas.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Avaliações}
+		\begin{eftable}
+			\LARGE
+			\begin{tabular}{c | c}
+				\textcolor{white}{Avaliação} & 
+				\textcolor{white}{Data} \\
+				1${}^a$ V.A & 10/09/2020 \\
+				2${}^a$ V.A & 29/10/2020 \\
+				3${}^a$ V.A & 10/12/2020 \\			
+			\end{tabular}
+		\end{eftable}
+	\end{frame}	
+	
+	\begin{frame}{Trabalhos – Regras gerais}
+		\begin{itemize}
+			\item Data de entrega - Avaliação
+			\begin{itemize}
+				\item Entregue na data correta – 100\%
+				\item Entregue com até uma semana de atraso – 50\%
+				\item Entregue com mais de uma semana de atraso – 0\%
+			\end{itemize}
+			\item Normas para os documentos
+			\begin{itemize}
+				\item \textbf{ABNT}
+			\end{itemize}
+			\item Plágio
+			\begin{itemize}
+				\item Em caso de plágio detectado em qualquer trabalho a nota será ZERO
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Pontuação}
+		\begin{itemize}
+			\item As notas para correção de provas e trabalhos serão de 0,25 em 0,25 pontos. Os arredondamentos só serão feitos após a nota fechada para lançamento no sistema. 
+
+			\item Nas provas: 
+			\begin{itemize}
+				\item erros absurdos - 0 pontos; 
+				\item raciocínio parcialmente correto: 25\%, 50\% ou 75\% da questão; 
+				\item acertos integrais ou com erros irrelevantes: 100\%.
+
+			\end{itemize}
+
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Pontuação}
+		\begin{center}
+			\Huge \alert {Em caso de comprovação de cola em provas, trabalhos idênticos (inclusive com os mesmos erros) e plágios, a nota será \textbf{ZERADA}.}		
+		\end{center}
+	\end{frame}
+	
+	\begin{frame}{Modelo de prova}
+		\begin{itemize}
+			\item Questões de ENADE e concursos públicos
+			\vspace{1em}
+			\item Questões objetivas e discursivas
+			\vspace{1em}
+			\item Conteúdos de aulas de laboratório poderão ser cobrados na prova
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Pontuação}
+	
+		\begin{itemize}
+			\item Avaliação teórica - \textbf{0 a 50 pontos}.
+			\vspace{1em}
+			\item Avaliações processuais - \textbf{0 a 40 pontos} distribuídos da seguinte forma:
+			\begin{itemize}
+				\item Questionário Aula – 0 a 12 pontos
+				\item APS – 0 a 5
+				\item Outras Atividades – 0 a 33;
+			\end{itemize}
+		\end{itemize}
+		
+		Na 3VA os alunos matriculados em Projeto Interdisciplinar terão uma pontuação de 30 pontos referentes aos trabalhos desta disciplina. Estes pontos serão deduzidos da nota de \textit{Outras atividades}
+	\end{frame}
+	
+	\begin{frame}{Material da disciplina}
+		\begin{itemize}
+			\item Disponibilizado no Lyceum
+			\vspace{1em}
+			\item Disponibilizado no AVA
+			\vspace{1em}
+			\item Disponível também no site \href{https://sites.google.com/site/professoralexandretannus}{\textcolor{blue}{https://sites.google.com/site/professoralexandretannus}}  
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Bibliografia Básica}
+		\begin{itemize}
+			\item DELGADO, José. \textbf{Arquitetura de Computadores.} Editora LTC; 2ª 2010
+			\vspace{1em}
+			\item STALLINGS, William. \textbf{Arquitetura e organização de computadores : projeto para o desempenho.} 5. ed. São Paulo: Pearson  Education, 2002. 786 p.
+			\vspace{1em}
+			\item TANENBAUM, Andrew S.. \textbf{Introdução à organização de computadores.} Tradutor de Nery MACHADO FILHO. 4. ed.  Rio de Janeiro: LTC
+
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}[allowframebreaks]{Bibliografia Complementar}
+		\begin{itemize}
+			\item HENNESSY, John L.; PATTERSON, David A. \textbf{Arquitetura de computadores: uma abordagem quantitativa.} Rio de  Janeiro: Campus, 2003. 827 p.
+			\vspace{1em}
+			\item MONTEIRO, Mário A.. \textbf{Introdução à organização de computadores.} 5. ed. Rio de Janeiro: LTC, 2012.
+			\vspace{1em}
+			\item PIVA JUNIOR, Dilermano. \textbf{Organização Básica de Computadores e Linguagem de Montagem.} Elsevier-Campus, 2012
+			\framebreak
+			\item PATTERSON, David A.; HENNESSY, John L.. \textbf{Organização e Projeto de Computadores}, 3.ed.  Campus-Elsevier.
+			\vspace{1em}
+			\item WEBER, Raul Fernando. \textbf{Fundamentos de arquitetura de computadores.} 3. ed. Sagra Luzzatto, 2004. 306 p.
+
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{}
+		
+	\end{frame}
+
+\end{document}
