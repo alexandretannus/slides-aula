@@ -1,0 +1,336 @@
+\documentclass[aspectratio=169,
+				xcolor=table]{beamer}
+
+% Load general definitions
+\input{../../defs/slides.tex}
+
+% Specific definitions
+\institute[]{\uppercase{Engenharia de Software}}
+\title[]{Sistemas Operacionais}
+\subtitle[]{\uppercase{Estrutura do Sistema Operacional}}
+\author[]{Prof. M.e Alexandre Tannus}
+\date{Anápolis - 2021.1}
+
+%\AtBeginSection{\frame{\tableofcontents[currentsection]}}
+
+\begin{document}
+	\begin{frame}
+		\titlepage
+		
+	\end{frame}
+
+	\begin{frame}
+		\tableofcontents
+	\end{frame}	
+	
+	\section{Introdução}
+	
+	\begin{frame}
+		\frametitle{Questionamentos}
+		\begin{itemize}
+			\item O que é um sistema operacional?
+			\vspace{1em}
+			\item Quais são as suas funções?
+			\vspace{1em}
+			\item Qual é a sua estrutura fundamental?
+		\end{itemize}
+	\end{frame}	
+	
+	
+	\begin{frame}{Objetivos de um Sistema Operacional}
+		\begin{itemize}
+			\item Gerenciamento de Recursos
+			\item Interface entre programador e os recursos do hardware
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Conceitos}
+		\begin{itemize}
+			\item \textit{Hardware}
+			\begin{itemize}
+				\item Parte física do sistema computacional
+			\end{itemize}
+			\vspace{1em}
+			\item \textit{Software}
+			\begin{itemize}
+				\item Programas 
+			\end{itemize}
+			\vspace{1em}
+			\item \textit{Firmware}
+			\begin{itemize}
+				\item Conjunto de instruções operacionais programadas diretamente no \textit{hardware}
+			\end{itemize}
+			\vspace{1em}
+		\end{itemize}
+	\end{frame}
+
+	\section{Conceitos Fundamentais}
+	
+	\begin{frame}{Tipos de Sistemas Operacionais}
+	\begin{itemize}
+		\item Computadores de grande porte			
+		\vspace{0.45em}
+		\item Servidores					
+		\vspace{0.45em}
+		\item Multiprocessadores			
+		\vspace{0.45em}
+		\item Computadores pessoais
+		\vspace{0.45em}		
+		\item Computadores portáteis
+		
+	\end{itemize}
+	\end{frame}
+
+	\begin{frame}{Tipos de Sistemas Operacionais}
+	\begin{itemize}
+		\item Embarcados
+		\vspace{0.45em}
+		\item Nós sensores
+		\vspace{0.45em}
+		\item Tempo Real
+		
+	\end{itemize}
+	\end{frame}	
+	
+	\begin{frame}{Classificação dos Sistemas Operacionais}
+		\begin{itemize}
+			\item Sistemas Monoprogramáveis
+			\vspace{1em}
+			\item Sistemas Multiprogramáveis
+			\begin{itemize}
+				\item \textit{Batch}
+				\item Tempo compartilhado
+				\item Tempo real
+			\end{itemize}
+			\vspace{1em}
+			\item Sistemas Multiprocessadores
+			\begin{itemize}
+				\item Fortemente acoplados
+				\item Fracamente acoplados
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Sistemas Monoprogramáveis}
+		\begin{columns}
+			\begin{column}{0.5\textwidth}			
+				\begin{itemize}
+					\item Também conhecidos como sistemas monotarefas
+					\vspace{1em}
+					\item Todos os recursos do sistema ficam dedicados exclusivamente a uma única tarefa
+					\vspace{1em}
+					\item Preocupação reduzida com problemas relacionados a compartilhamento de recursos
+					\vspace{1em}
+					\item Implementação simples
+				\end{itemize}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+			\begin{figure}[hbtp]
+				\centering
+				\includegraphics[width=.85\textwidth, keepaspectratio]{../figs/cap01/monotarefa.png}
+			\end{figure}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	\begin{frame}{Sistemas multiprogramáveis}
+		\begin{columns}
+			\begin{column}{0.5\textwidth}
+				\begin{itemize}
+					\item Também conhecidos como sistemas multitarefas
+					\vspace{0.8em}
+					\item Recursos compartilhados entre diversos usuários e aplicações
+					\vspace{0.8em}
+					\item Sistema operacional controla o acesso concorrente aos recursos
+					\vspace{0.8em}
+					\item Redução de custos e tempo médio de execução das aplicações
+					\vspace{0.8em}
+					\item Implementação mais complexa que a dos sistemas monotarefa
+				\end{itemize}
+			\end{column}
+			\begin{column}{0.5\textwidth}			
+				\begin{figure}[hbtp]
+					\centering
+					\includegraphics[width=.85\textwidth, keepaspectratio]{../figs/cap01/multitarefa.png}
+				\end{figure}
+			\end{column}
+		\end{columns}
+	\end{frame}
+		
+	\begin{frame}{Estrutura Interna do sistema operacional}
+	\begin{itemize}
+		\item Monolítico
+		\item Microkernel
+		\item Cliente-servidor
+		\item Máquinas virtuais
+		\item Exonúcleo
+	\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Sistema monolítico}	
+		\begin{itemize}
+			\item Sistema operacional executado como um único programa no modo núcleo
+			\vspace{1em}
+			\item Rotinas podem chamar outras rotinas caso seja necessário
+			\vspace{1em}
+			\item Construção
+			\begin{itemize}
+				\item Compilação individual de cada rotina
+				\item Junção de todas utilizando um \textit{linker}
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}{Sistema monolítico}
+		\begin{figure}[hbtp]
+			\centering
+			\includegraphics[width=.95\textheight, keepaspectratio]{../figs/cap01/monolitico}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}{Microkernel}
+	
+	\begin{itemize}
+		\item Divisão do sistema operacional em módulos pequenos e com funções bem definidas
+		\vspace{1em}
+		\item Apenas o módulo principal (micronúcleo) é executado em modo núcleo
+	\end{itemize}	
+	
+	\end{frame}
+	
+
+	\begin{frame}{Microkernel}
+			\begin{figure}[hbtp]
+	\centering
+	\includegraphics[height=.75\textheight, keepaspectratio]{../figs/cap01/microkernel}
+	\end{figure}
+	\end{frame}	
+	
+	\begin{frame}{Serviços do Sistema Operacional}
+		\begin{itemize}
+			\item O sistema operacional fornece serviços para programas e para usuários
+			\item Serviços para o usuário
+			\begin{itemize}
+				\item Interface de usuário
+				\item Execução de programas
+				\item Operações de I/O
+				\item Manipulação do sistema de arquivos
+				\item Comunicações
+				\item Detecção de erros
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}{Serviços do Sistema Operacional}
+		\begin{itemize}
+			\item Funções para operação eficiente do sistema
+			\begin{itemize}
+				\item Alocação de recursos
+				\item Contabilização
+				\item Proteção e segurança
+			\end{itemize}
+		\end{itemize}
+	\end{frame}	
+	
+	\begin{frame}{Tarefas de Gerenciamentos}
+		\begin{itemize}
+			\item Processos			
+			\vspace{0.8em}
+			\item Memória
+			\vspace{0.8em}
+			\item Arquivos			
+			\vspace{0.8em}
+			\item Entrada e sáida			
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Interpretador de comandos}
+	\begin{itemize}
+		\item Programa que realiza a interface entre o usuário e o sistema operacional
+		\vspace{1em}
+		\item Leitura e processamento de comandos
+		\begin{itemize}
+			\item \textit{Login}/\textit{logout}
+			\item Manipulação de arquivos
+			\item Execução de programas
+		\end{itemize}
+	\end{itemize}
+		
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Chamada de sistema (system calls)}
+		\begin{itemize}
+			\item Interface entre os aplicativos e o sistema operacional
+			\item Exemplos de \textit{system calls}
+			\begin{itemize}
+				\item leitura de relógio (\textit{get\_clocktime})
+				\item encerrar processo (\textit{kill})
+				\item gravação de dados (\textit{write})
+			\end{itemize}
+			
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Categorias de chamadas de sistema}
+		\begin{itemize}
+			\item Gerenciamento de processos	
+			\vspace{0.8em}
+			\item Sinais	
+			\vspace{0.8em}
+			\item Gerenciamento de arquivos	
+			\vspace{0.8em}
+			\item Gerenciamento de diretórios	
+			\vspace{0.8em}
+			\item Proteção	
+			\vspace{0.8em}
+			\item Gerenciamento de tempo
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Chamadas de gerenciamento de processos}
+		\begin{itemize}
+			\item fork (Criação de processo)
+			\item waitpid (Espera de finalização)
+			\item exec (Execução do processo)
+			\item getpid (Identificação do processo)
+		\end{itemize}
+		
+	\end{frame}
+			
+	\begin{frame}{Chamadas de sinais}
+		\begin{itemize}
+			\item sigaction (Definição de ação)
+			\item kilk (Finalização do processo)
+			\item pause (Suspensão do processo)
+		\end{itemize}
+		
+	\end{frame}
+	
+	\begin{frame}{Chamadas de gerenciamento de arquivos}
+		\begin{itemize}
+			\item open
+			\item close
+			\item read
+			\item write
+		\end{itemize}
+		
+	\end{frame}	
+	
+	\begin{frame}
+		\frametitle{Bibliografia}
+		\begin{itemize}
+			\item SILBERSCHATZ, A.; GALVIN, P. B.; GAGNE, G.. \textbf{Fundamentos de sistmas operacionais: princípios básicos}. Rio de Janeiro: LTC – Livros Técnicos e Científicos, 2013.
+
+
+			\item ENGLANDER, Irv. \textit{A Arquitetura de Hardware Computacional, Software de Sistema e Comunicação em Rede.} 4.ed Rio de Janeiro, LTC, 2011
+
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{}
+		
+	\end{frame}
+	
+\end{document}
