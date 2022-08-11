@@ -1,0 +1,171 @@
+\documentclass[aspectratio=169,
+				xcolor=table]{beamer}
+				
+% Load general definitions
+\input{../../defs/slides.tex}
+
+% Specific definitions
+\title[]{Sistemas Operacionais}
+\subtitle[]{Exercícios}
+\author[]{Prof. Alexandre Tannus}
+\date{}
+
+\AtBeginSection{\frame{\tableofcontents[currentsection]}}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\begin{frame}
+		\tableofcontents		
+	\end{frame}	
+	
+	\begin{frame}
+		\frametitle{Questão 1}
+		Considerando as estruturas básicas de processamento, assinale a alternativa correta.
+		\begin{enumerate}[a]
+			\item Na estrutura de processamento Multitarefa, é permitida a realização de diferentes tarefas simultaneamente, desde que com múltiplos processadores.
+			\item Na Multitarefa, o processador trabalha em várias partes de um mesmo programa ou em vários programas concorrentemente.
+			\item Na estrutura de processamento tipo Multiprogramação, não é permitida a execução concorrente, ou aparentemente simultânea de múltiplos programas por um único computador.
+			\item Na estrutura de processamento tipo Multiprocessamento, vários usuários passam a compartilhar o mesmo computador. 
+			\item Na estrutura tipo Multiprocessamento, o sistema usa múltiplos processadores para executar um ou vários programas. Também é chamado de processamento paralelo.		
+		\end{enumerate}
+	\end{frame}	
+	
+	\begin{frame}
+		\frametitle{Questão 2 - ARCE 2012}
+		Sistema Operacional (SO) é uma camada de software colocada sobre o hardware para gerenciar todos os componentes do sistema, apresentando-o ao usuário como uma interface simples de entender e de programar. Considere as afirmativas a seguir sobre Sistemas Operacionais.
+
+	\begin{enumerate}[I]
+		\scriptsize
+		\item Os programas de aplicação solicitam serviços ao SO através da execução de chamadas de sistema. Os SOs oferecem Application Program Interfaces (APIs) para que os programadores usem funções para interagir com suas rotinas.
+
+		\item O Basic Input/Output System (BIOS) é um dispositivo de hardware que assegura que todos os recursos funcionem em conjunto num computador.
+
+		\item Firmware são programas ou instruções gravados no hardware da máquina que permitem a comunicação com outros dispositivos eletrônicos.
+
+		\item A interface entre o SO e os programas de aplicação é definida pelo conjunto de instruções estendidas fornecidas pelo SO. Estas instruções são conhecidas como Dynamic Link Library (DLL).
+
+	\end{enumerate}
+
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Questão 3 - CEFET-MG 2014}
+		
+		São componentes internos ao Sistema Operacional, os princípios de
+		\begin{enumerate}[a]
+			\item sistema de interpretação de comandos, barramento, memória, discos e sistema de processamento.
+
+			\item gerência de processos, shell, gerenciamento de diretórios, memória virtual e linguagem de programação.
+
+			\item sistema cliente-servidor, máquinas virtuais, linguagem de máquina, sistema multitarefa e multiprocessamento.
+
+			\item gerência de memória, controle de processos, controle de E/S, sistema de arquivos e sistema de segurança.
+
+			\item ambiente operacional, sistema de aplicativos, browser, controle de leitura/gravação e sistema de armazenamento.
+
+		\end{enumerate}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Questão 4 - COPASA 2014}
+		Analise as seguintes afirmativas referentes às funções básicas dos sistemas operacionais e classifique-as com V para as verdadeiras e F para as falsas. 
+
+\vspace{1em}
+
+( ) Compartilhar recursos de forma organizada e protegida. 
+
+\vspace{0.6em}
+( ) Substituir o uso da memória principal pelo processador. 
+
+\vspace{0.6em}
+( ) Facilitar acesso aos recursos do sistema. 
+
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Questão 5}
+		Analise os itens abaixo sobre sistemas operacionais:
+		\begin{enumerate}[I]
+			\item O sistema operacional determina quais programas vão executar, quando, e quais recursos ele poderá utilizar.
+
+			\item Todo programa em execução no sistema operacional ocupa espaço na memória do computador.
+
+			\item O termo software pode denominar um conjunto de programas ou apenas um programa específico. Entretanto, um sistema operacional não pode ser considerado um software
+		\end{enumerate}
+
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Questão 6 - CEGÁS 2017}
+		\vspace{-1.5em}
+		Assinale a alternativa correta para o conceito de sistemas operacionais. 
+		\begin{enumerate}[a]
+			\scriptsize
+			\item Trata-se de um conjunto de programas que tem como funções básicas administrar processos e pessoas que estejam operando o computador, a memória principal, armazenamento secundária bem como o sistema de entrada e de saída E/S. Seus componentes básicos são administração de arquivos, sistemas de proteção, comunicação e interpretador de comandos do sistema. 
+
+			\item Trata-se de um conjunto de programas que tem como funções básicas administrar processos, a memória principal, armazenamento secundária bem como o sistema de entrada e de saída E/S. Seus componentes básicos são administração de arquivos, sistemas de proteção, comunicação e interpretador de comandos do sistema. 
+
+			\item Trata-se de um conjunto de programas que tem como funções básicas administrar processos, a memória principal, armazenamento secundária bem como o sistema de entrada e de saída E/S. Seus componentes básicos são administração de arquivos, sistemas de proteção, comunicação e interpretador de comandos do sistema. É também responsável pela criptografia das informações para garantir a segurança digital. 
+
+			\item Trata-se de um conjunto de programas que tem como funções básicas gerenciamento de banco de dados, administrar processos, a memória principal, armazenamento secundária bem como o sistema de entrada e de saída E/S. Seus componentes básicos são administração de arquivos, sistemas de proteção, comunicação e interpretador de comandos do sistema.
+		\end{enumerate}
+
+
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Questão 7 - UFJF 2017}
+		Sobre sistemas operacionais em geral, é INCORRETO afirmar que:
+		\begin{enumerate}[a]
+			\small
+			\item Um sistema operacional é responsável pelo gerenciamento dos recursos de hardware de um computador, permitindo o uso destes recursos por programas em execução.  
+
+			\item Um sistema operacional oferece uma interface ao usuário que, no mínimo, permite a escolha e execução de programas. 
+
+			\item Um sistema operacional normalmente suporta um ou mais tipos de sistemas de arquivos, de forma a permitir o armazenamento da informação pelos usuários ao manipularem seus programas.  
+
+			\item Sistemas operacionais multitarefa são construídos especificamente para computadores com mais de uma CPU, para oferecer o suporte adequado à execução de tarefas concorrentemente. 
+
+			\item Sistemas operacionais multiusuário devem ser multitarefa, para oferecer o suporte adequado a vários usuários concorrentemente.
+
+		\end{enumerate}
+
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Questão 8 - Petrobras 2012}
+		O mecanismo pelo qual programas dos usuários solicitam serviços ao núcleo do sistema operacional é denominado
+		\begin{enumerate}[a]
+			\item biblioteca do sistema
+
+			\item chamada do sistema
+
+			\item editor de ligação 
+
+			\item shell de comandos
+
+			\item ligação dinâmica
+
+		\end{enumerate}
+
+	\end{frame}
+	
+	\begin{frame}{POSCOMP 2002}
+
+		\textit{Starvation} ocorre quando:
+		
+		\begin{enumerate}[a)]
+			\item Pelo menos um processo é continuamente postergado e não executa.
+			\item A prioridade de um processo é ajustada de acordo com o tempo total de execução do mesmo.
+			\item Pelo menos um evento espera por um evento que não vai ocorrer.
+			\item Dois ou mais processos são forçados a acessar dados críticos alternando estritamente entre eles.
+			\item O processo tenta mas não consegue acessar uma variável compartilhada.
+			
+		\end{enumerate}
+	\end{frame}
+\end{document}
+

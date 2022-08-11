@@ -1,0 +1,182 @@
+\documentclass[aspectratio=169,
+				xcolor=table]{beamer}
+
+% Load general definitions
+\input{../../defs/slides.tex}
+
+% Specific definitions
+\institute[]{\uppercase{Engenharia de Software}}
+\title[]{Sistemas Operacionais}
+\subtitle[]{\uppercase{Conceitos Básicos}}
+\author[]{Prof. M.e Alexandre Tannus}
+\date{Anápolis - 2021.1}
+
+%\AtBeginSection{\frame{\tableofcontents[currentsection]}}
+
+\begin{document}
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Professor Alexandre Tannus}
+		\begin{center}
+			\centering
+			\huge Bacharel em Engenharia da Computação
+			\begin{figure}
+				\centering
+				\includegraphics[height=2cm, keepaspectratio]{../figs/puc.jpg} 			
+			\end{figure}
+			\huge Mestre em Engenharia Elétrica
+			\begin{figure}
+			\centering
+				\includegraphics[height=2cm, keepaspectratio]{../figs/ufmg} 		
+			\end{figure}
+		\end{center}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Objetivos}
+		\begin{itemize}
+			\item Compreender a função de um sistema operacional.
+			\vspace{1em}
+			\item Compreender o quanto os sistema operacionais influenciam na execução de aplicações. 
+			\vspace{1em}
+			\item Entender como os sistemas operacionais gerenciam os recursos de: processamento, memória, comunicação, entrada/saída, sistema de arquivos.
+		\end{itemize}
+	\end{frame}
+
+
+
+	\begin{frame}
+		\frametitle{Ementa}
+		\begin{itemize}
+			\item Estrutura/organização de Sistemas Operacionais 
+			\vspace{1em}
+			\item Processos e Threads
+			\vspace{1em}
+			\item Deadlocks
+			\vspace{1em}
+			\item Gerenciamento de Memória
+			\vspace{1em}
+			\item Entrada/Saída e sistemas de arquivos
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Avaliações}
+		\begin{eftable}
+			\begin{tabular}{c | c}
+				\textcolor{white}{Avaliação} & 
+				\textcolor{white}{Data} \\
+				1 ${}^a$ V.A & 06/04/2021 \\
+				2 ${}^a$ V.A & 11/05/2021 \\
+				3 ${}^a$ V.A & 15/06/2021 \\			
+			\end{tabular}
+		\end{eftable}
+	\end{frame}	
+	
+	\begin{frame}
+		\frametitle{Trabalhos – Regras gerais}
+		\begin{itemize}
+			\item Data de entrega - Avaliação
+			\begin{itemize}
+				\item Entregue na data correta – 100\%
+				\item Entregue com até uma semana de atraso – 50\%
+				\item Entregue com mais de uma semana de atraso – 0\%
+			\end{itemize}
+			\item Normas para os documentos
+			\begin{itemize}
+				\item \textbf{ABNT}
+			\end{itemize}
+			\item Plágio
+			\begin{itemize}
+				\item Em caso de plágio detectado em qualquer trabalho a nota será ZERO
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Pontuação}
+		\begin{itemize}
+			\item As notas para correção de provas e trabalhos serão de 0,25 em 0,25 pontos. Os arredondamentos só serão feitos após a nota fechada para lançamento no sistema. 
+
+			\item Nas provas: 
+			\begin{itemize}
+				\item erros absurdos - 0 pontos; 
+				\item raciocínio parcialmente correto: 25\%, 50\% ou 75\% da questão; 
+				\item acertos integrais ou com erros irrelevantes: 100\% .
+
+			\end{itemize}
+
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Pontuação}
+		\begin{center}
+			\Huge \alert {Em caso de comprovação de cola em provas, trabalhos idênticos (inclusive com os mesmos erros) e plágios, a nota será \textbf{ZERADA}.}		
+		\end{center}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Modelo de prova}
+		\begin{itemize}
+			\item Questões de ENADE e concursos públicos
+			\vspace{1em}
+			\item Questões objetivas e discursivas
+			\vspace{1em}
+			\item Conteúdos de aulas de laboratório poderão ser cobrados na prova
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Material da disciplina}
+		\begin{itemize}
+			\item Disponibilizado no Lyceum
+			\vspace{1em}
+			\item Disponível também no site \href{https://sites.google.com/site/professoralexandretannus}{\textcolor{blue}{https://sites.google.com/site/professoralexandretannus}}  
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Bibliografia Básica}
+		\begin{itemize}
+			\vspace{1em}
+			\item SILBERSCHATZ, A.; GALVIN, P. B.; GAGNE, G.. \textbf{Fundamentos de sistemas operacionais: princípios básicos.} Rio de Janeiro: LTC – Livros Técnicos e Científicos, 2013.
+			\vspace{1em}
+			\item COULOURIS, G.; DOLLIMORE, J.; KINDBERG, T. \textbf{Sistemas distribuídos: conceitos e projeto.} 5. ed. Porto Alegre, RS, Brasil: Bookman, 2013. 1048 p. 
+			\vspace{1em}
+			\item DEITEL, H. M. e outros. \textbf{Sistemas Operacionais.} 3ª edição, São Paulo: Pearson Prentice Hall, 2005.
+
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Bibliográfia Complementar}
+		\begin{itemize}
+			\item TANEMBAUM, A. S. Sistemas Operacionais Modernos, São Paulo: Prentice-Hall, 2003.
+			\vspace{1em}
+			\item SILBERSCHATZ, A.; GALVIN, P.B.; GAGNE, G. \textbf{Sistemas operacionais com Java.} 7. ed. Rio de Janeiro, RJ, Brasil: Elsevier, 2008. 673 p.
+			\item CORTÊS, Pedro Luiz. \textbf{Sistemas operacionais: fundamentos.} 2. ed. São Paulo: São Paulo, 2005.
+
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Bibliográfia Complementar}
+		\begin{itemize}
+		
+			\item OLIVEIRA, R.S.; CARISSIMI, A.S.; TOSCANI, S.S. \textbf{Sistemas operacionais e programação concorrente.} Sagra Luzzatto, 2003.
+			\vspace{1em}
+			\item TOSCANI, S.S.; OLIVEIRA, R.S.; CARISSIMI, A.S. \textbf{Sistemas operacionais e programação concorrente.} Sagra Luzzatto, 2003.
+			\vspace{1em}
+			\item FLYNN, I.M. \textbf{Introdução aos sistemas operacionais.} Thonson, 2002.
+
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+	
+	\end{frame}
+\end{document}

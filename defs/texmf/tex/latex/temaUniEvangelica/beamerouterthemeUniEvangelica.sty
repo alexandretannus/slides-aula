@@ -1,0 +1,132 @@
+\usepackage{etoolbox}
+\usepackage{xpatch}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\mode<presentation>
+
+\definecolor{Blue}{RGB}{0, 32, 96}
+
+ \ifnumequal{\c@framenumber}{1}{%
+	\setbeamersize{text margin left=2cm}
+}{
+	\setbeamersize{text margin left=1cm}
+	\setbeamersize{text margin right=1cm}
+}
+
+%\setbeamertemplate{headline}
+%{
+%	\includegraphics[width=\paperwidth,height=1cm]{./images/header.png}
+%
+%}
+
+%\setbeamertemplate{sidebar canvas right}
+%{
+%	%\vspace*{5pt} 
+%	%\hspace*{-85pt}
+%	%\includegraphics[scale=0.1]{./images/kroton.jpg}	
+%	\hspace{-2.3cm}
+%	\includegraphics[scale=0.2]{./images/pitagoras.png}	
+%}
+
+
+\setbeamertemplate{background canvas}{
+
+   \ifnumequal{\c@framenumber}{1}{%
+      % First frame
+      \includegraphics[width=\paperwidth,height=\paperheight]{bgEvangelicaSlideTitle}
+   }{%
+      \ifnumequal{\c@framenumber}{\inserttotalframenumber}{
+         % Last frame
+          \tikz[remember picture,overlay]
+		\node[opacity=1] at (current page.center) {
+			\includegraphics[width=\textwidth,keepaspectratio]{bgEvangelicaSlideFim}};
+         %\includegraphics[width=\textwidth, keepaspectratio]{bgEvangelicaSlideFim}		
+
+      }{%
+         % Other frames
+			\includegraphics[width=\paperwidth,height=\paperheight]{bgEvangelicaSlide}
+      }%
+   }%
+ }
+
+\setbeamertemplate{frametitle}
+{
+	%\vspace*{-2em}	
+	%\insertframetitle
+
+	 \textcolor{white}{\huge \insertframetitle}
+
+}
+
+\setbeamertemplate{title page}
+{
+	\vspace*{2.3cm}
+
+	\centering
+	\huge	
+	\fontfamily{phv}\fontseries{mc}\selectfont
+	\textcolor{Blue}{\uppercase{Curso de }\insertinstitute}
+	\\
+	
+	\vspace*{0.3cm}
+	\Large
+	\fontfamily{phv}\fontseries{mc}\selectfont
+	 \textcolor{Blue}{Disciplina: \inserttitle}
+	\\
+	
+	\vspace*{0.7cm}
+	\fontfamily{phv}\fontseries{mc}\selectfont
+	\Large
+	 \textcolor{Blue}{\insertsubtitle}
+	\\
+	
+	\vspace*{0.8cm}
+	\fontfamily{phv}\fontseries{mc}\selectfont
+	\rightline{\insertauthor}
+	
+	\large
+	\vspace*{1.2cm}
+	\hspace*{-0.5cm}
+	\insertdate
+	
+}
+
+\setbeamertemplate{section page}
+{
+		\begin{flushright}
+			\begin{Huge}
+				\vspace{4.5cm}
+				\textcolor{Blue}
+				\insertsectionhead	
+			\end{Huge}
+		\end{flushright}	
+}
+%\setbeamertemplate{footline}
+%{
+%	\includegraphics[width=\paperwidth,height=1cm]{../images/footer1.png}
+%}
+
+
+%% Itemize config
+\setbeamercolor{itemize subitem}{fg=Blue}
+\setbeamercolor{itemize item}{fg=Blue}
+\setbeamertemplate{itemize item}{\raisebox{0.1ex}{$\blacktriangleright$}\hskip0.1em}
+\setbeamertemplate{itemize subitem}{\raisebox{0.1ex}{$\blacktriangleright$}\hskip0.1em}
+\xpatchcmd{\itemize}
+  {\def\makelabel}
+  {\ifnum\@itemdepth=1\relax
+     \setlength\itemsep{2ex}% separation for first level
+   \else
+     \ifnum\@itemdepth=2\relax
+       \setlength\itemsep{1ex}% separation for second level
+     \else
+       \ifnum\@itemdepth=3\relax
+         \setlength\itemsep{0.5ex}% separation for third level
+   \fi\fi\fi\def\makelabel
+  }
+
+
+\setbeamertemplate{footline}[page number]%
+
+\setbeamertemplate{navigation symbols}{}
